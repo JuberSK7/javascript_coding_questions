@@ -57,4 +57,13 @@ const findMax = Math.min(...arr);
 console.log(findMax)// 0
 
 
+3) //// ****check string string is palindrom or not (reads the same forwards and backwards);
+//using split, reverse and join methods
+
+function isPalindrom(str){
+  return str === str.split('').reverse().join('');
+}
+console.log(isPalindrom(sbkkbs)) // true
+
+
 
