@@ -66,4 +66,25 @@ function isPalindrom(str){
 console.log(isPalindrom(sbkkbs)) // true
 
 
+4) ////******** Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers.
+const arr = [1,2,3,4,2,5,1,6,8,9,6,8,0];
+const findEvenNums = arr.filter((num) => num % 2 === 0);
+console.log(findEvenNums);//[ 1, 3, 5, 1, 9 ]
+
+//Note :- for finding the odd , then chnage the instead 0 to 1
+
+
+5)//// ********* Write a JavaScript program to calculate the factorial of a given number.
+
+  function findFactorial(num){
+     if(num === 0 || num ===1){
+       return 1
+     }else{
+       return num * findFactorial(num - 1);
+    }
+  }
+
+console.log(findFactorial(2))// 2
+
+6) /////******** Write a JavaScript program to find the largest element in a nested array. 
 
