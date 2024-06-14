@@ -1,1 +1,1 @@
-50 javascript coding interview questions and answers
+50 javascript coding interview questions.
