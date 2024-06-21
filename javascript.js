@@ -88,3 +88,20 @@ console.log(findFactorial(2))// 2
 
 6) /////******** Write a JavaScript program to find the largest element in a nested array. 
 
+
+7) /////////// ******** write a programe to create the chunks
+
+function createChunks(arr, size){
+    let result = [];
+    let minRes = [];
+    for(let i=0; i <arr.length; i++){
+        minRes.push(arr[i]);
+        if(minRes.length === size || i === arr.length- 1){
+            result.push(minRes);
+            minRes = [];
+        }
+    }
+    console.log(result)
+}
+
+createChunks([1,2,3,4,5], 1)//// [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ] ]
