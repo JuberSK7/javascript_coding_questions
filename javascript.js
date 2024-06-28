@@ -18,6 +18,8 @@ console.log(removeDuplicate); //[ 1, 2, 3, 4, 5, 6, 8, 9];
 const removeDuplicte = [...new Set(arr) ];
 console.log(removeDuplicte); //[ 1, 2, 3, 4, 5, 6, 8, 9];
 
+/////// 
+
 
 2) // Find the largest or maximum number in the array
 
@@ -105,3 +107,15 @@ function createChunks(arr, size){
 }
 
 createChunks([1,2,3,4,5], 1)//// [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ] ]
+
+8) //////////// ********** Event Delegation 
+
+Event delegation is a technique involving adding event listeners to a parent element instead of adding them to the descendant elements.
+The listener will fire whenever the event is triggered on the descendant elements due to event bubbling up the DOM.
+
+example : - 
+<ul onclick='alert(event.type)'>
+  <li>User1</li>
+  <li>User2</li>
+  <li>User3</li>
+  <ul>
