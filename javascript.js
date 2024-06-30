@@ -131,3 +131,36 @@ console.log('fizz')
     console.log('buzz')
 }
 }
+10) ///////////////  ************ Create the timer app in react js
+
+import React, { useState, useRef, useEffect } from "react";
+
+export default function App() {
+  const [time, setTime] = useState(0);
+  const timer = useRef();
+
+  const start = () => {
+    timer.current = setInterval(() => {
+      setTime((prevState) => prevState + 1);
+    }, 1000);
+  };
+
+  const reset = () => {
+    setTime(0);
+    clearInterval(timer.current);
+  };
+
+  const stop = () => {
+    clearInterval(timer.current);
+  };
+
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h1>{time}</h1>
+      <button onClick={start}>Start</button>
+      <button onClick={reset}>Reset</button>
+      <button onClick={stop}> Stop </button>
+    </div>
+  );
+}
