@@ -164,3 +164,36 @@ export default function App() {
     </div>
   );
 }
+
+11) /////////////////////// ******************  calculator
+
+/// computeAmount().lacs(15).crore(5).crore(2).lacs(20).thousands(45).crore(7).value()
+function calculater(){
+
+   this.totalAmount =1; 
+
+  this.lacs = function(amount){
+   this.totalAmount += amount * 100000;
+    return this
+  }
+  this.crore = function(amount){
+     this.totalAmount += amount * 10000000;
+     return this
+  }
+  this.thousands = function(amount){
+  this.totalAmount += amount * 1000;
+     return this
+  }
+  
+  
+ this.value = function(amount){
+    return this.totalAmount;
+   
+  }
+}
+
+function computeAmount(){
+  return new calculater();
+}
+
+console.log(computeAmount().lacs(15).crore(5).crore(2).lacs(20).thousands(45).crore(7).value())
