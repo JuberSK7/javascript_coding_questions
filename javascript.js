@@ -58,6 +58,26 @@ console.log(minNum)// 1
 const findMax = Math.min(...arr);
 console.log(findMax)// 0
 
+0) ///////////// ******* ////find the second largest value in the Array
+
+const arr = [1,2,3,4,5,6,7,8,9];
+
+function findSecondLargestNum(){
+  let largeNum = -Infinity;
+  let secondLarge = -Infinity;
+  
+  for(let i=0; i < arr.length; i++){
+    if(arr[i] > largeNum){
+      secondLarge = largeNum;
+      largeNum = arr[i];
+    }else if(arr[i] > secondLarge && arr[i] !== largest){
+      secondLarge = arr[i];
+    }
+  }
+return secondLarge
+} 
+console.log(findSecondLargestNum()) // 8
+
 
 3) //// ****check string string is palindrom or not (reads the same forwards and backwards);
 //using split, reverse and join methods
