@@ -196,4 +196,27 @@ function computeAmount(){
   return new calculater();
 }
 
-console.log(computeAmount().lacs(15).crore(5).crore(2).lacs(20).thousands(45).crore(7).value())
+console.log(computeAmount().lacs(15).crore(5).crore(2).lacs(20).thousands(45).crore(7).value());
+
+
+12) //////////////// *******************  write a program to return 'fuzz' for number is divide by 3 and return 'Buzz' for number is dived by 5 or both is devided then return 'Fizzbuzz'
+  Note : show the fizz text on divid by 3 and buzz devide by 5 instead of number.
+
+
+    function fizzBuzz(){
+    for(let i=0; i<100; i++){
+      let output = '';
+      if(i % 3 === 0) {
+        output += 'fizz';
+      }
+        if(i % 5 === 0) {
+        output += 'buzz';
+      }
+      if(output === ''){
+        output = i.toString();
+      }
+      console.log(output);
+    }
+  }
+
+fizzBuzz() /////fuzzbuzz 1 2 fuzz 4 buzz fuzz 7 8 fuzz buzz .....
