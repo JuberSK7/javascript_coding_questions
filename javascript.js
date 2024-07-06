@@ -240,3 +240,34 @@ console.log(computeAmount().lacs(15).crore(5).crore(2).lacs(20).thousands(45).cr
   }
 
 fizzBuzz() /////fuzzbuzz 1 2 fuzz 4 buzz fuzz 7 8 fuzz buzz .....
+
+
+13) What is Spread Oprator ? and Example of Spread Oprator.
+  Answer: Spread Oprator ar spread or extract the values in the array.
+
+  Example : 
+  a) Concatinating Array: 
+    const a = [1,2,3];
+    const b = [4,5,6];
+    const z = [...a, ...b];
+    console.log(z)// [1,2,3,4,5,6];
+
+  b) Copying array
+  const a = [1,2,3];
+  const z = [...a]
+  console.log(z);
+
+ c) Passing Multiple Parameter into single Argument in a function
+ const arr1 = [1,2,3];
+   function MyFun(arg1, arg2){
+     console.log(arg1, arg2);
+ }
+MyFun(...arr1);
+
+14) What is Rest Oprator ? and Example of rest Oprator.
+Answer : Rest oprator condence multiple element into a single array or object.
+Expample : 
+ function Example(...args){
+ console.log(args)
+ }
+ Example(1,2,3,4);
