@@ -271,3 +271,40 @@ Expample :
  console.log(args)
  }
  Example(1,2,3,4);
+
+15) Whats the difference between Object.keys,values and entries
+ Object.keys(): This will return the array of keys
+ Object.values(): This will return the array of values
+ Object.entries(): This will return array of [key,value] pairs.
+Example : 
+   let data = {
+      name: "Sai",
+      lang: "English"
+   };
+   Object.keys(data)  // ["name","lang"]
+   Object.values(data) // ["Sai","english"]
+   Object.entries(data) // [["name","Sai"],["lang","English"]]
+
+16) What is the Object.freez() and Object.seal() methods in Javascript ?
+
+  a) Object.freez() :
+   We Make the object totally Immutable (Prevent the addition of new Properties and moditification of existing Properties);
+
+   const obj1 = {
+    name : 'Zuber',
+    age: 23
+   }
+   Object.freez(obj1);
+   obj1.name = 'NoName';
+   obj1.age = 24;
+  console.log(obj1) //{ name : 'Zuber', age: 23}
+
+  b) Object.seal();
+  Will Prevent the addition of new properties but we can modify existing properties.
+   let data = {
+      a : 10
+    };
+   Object.seal(data);
+   data.a = 20;
+   data.c = 30;
+ console.log(data) // a: 20
