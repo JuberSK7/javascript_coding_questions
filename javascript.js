@@ -218,6 +218,22 @@ function computeAmount(){
 
 console.log(computeAmount().lacs(15).crore(5).crore(2).lacs(20).thousands(45).crore(7).value());
 
+12) // ************* Return the array of object based on types of items
+function filterBytype(items){
+    const fruits = [];
+    const vegetable =[];
+    items.map((item) => {
+        if(item.type == 'fruit'){
+            fruits.push(item)
+        }
+         if(item.type == 'vegetable'){
+            vegetable.push(item)
+        }
+    })
+    return {fruits, vegetable}
+}
+console.log(filterBytype(items))
+
 
 12) //////////////// *******************  write a program to return 'fuzz' for number is divide by 3 and return 'Buzz' for number is dived by 5 or both is devided then return 'Fizzbuzz'
   Note : show the fizz text on divid by 3 and buzz devide by 5 instead of number.
