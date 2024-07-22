@@ -372,3 +372,14 @@ function longestSentance(str){
 
 longestSentance('Hi Im Shaikh Juber')
 
+20) ///// reverse the String
+
+function reverseString(str){
+  let reverse = '';
+  for(let i=str.length -1; i >=0; i--){
+    reverse += str[i]
+  }
+  console.log(reverse)
+}
+
+reverseString('hi my name is Juber')
