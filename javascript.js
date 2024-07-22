@@ -355,5 +355,20 @@ function checkPalindrom(str) {
   }
   return 'isPalindrom'
 }
-console.log(checkPalindrom('madam'))
+console.log(checkPalindrom('madam'));
+
+19) /////// ***********write a function in javascript to retrun logest sentances in the String
+
+function longestSentance(str){
+  let wordsArray = str.split(' ');
+  let logestStr = '';
+  for(let i=0; i < wordsArray.length; i++){
+    if(wordsArray[i].length > logestStr.length){
+      logestStr = wordsArray[i]
+    }
+  }
+  console.log(logestStr)
+}
+
+longestSentance('Hi Im Shaikh Juber')
 
