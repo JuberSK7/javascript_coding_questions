@@ -324,3 +324,22 @@ Example :
    data.a = 20;
    data.c = 30;
  console.log(data) // a: 20
+
+17) ////////////// ************* Write a function to take array of arguments as numbers and return new array with only even numbers in the input array
+
+function filterEvens(arr){
+  const evensNumber = arr.filter((ele) => ele % 2 == 0)
+  console.log(evensNumber)
+}
+
+function filterEvens(arr){
+  const result = [];
+  for(let i=0; i < arr.length; i++){
+    if(arr[i] % 2 === 0){
+      result.push(arr[i])
+    }
+  }
+  console.log(result)
+}
+
+filterEvens([1,2,3,4,5,6,7,8,-8,19,9,10]);
