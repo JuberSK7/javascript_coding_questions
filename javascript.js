@@ -343,3 +343,17 @@ function filterEvens(arr){
 }
 
 filterEvens([1,2,3,4,5,6,7,8,-8,19,9,10]);
+
+13) ////////// **************write a function in javascript to check the string is palindrome or not ?
+
+function checkPalindrom(str) {
+  let len = str.length;
+  for(let i=0; i< len/2; i++){
+    if(str[i] !== str[len - i - 1]){
+      return 'isNotPalindrom'
+    }
+  }
+  return 'isPalindrom'
+}
+console.log(checkPalindrom('madam'))
+
