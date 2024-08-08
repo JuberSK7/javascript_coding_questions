@@ -382,4 +382,19 @@ function reverseString(str){
   console.log(reverse)
 }
 
-reverseString('hi my name is Juber')
+reverseString('hi my name is Juber');
+
+21) **********///////////////////Check if a given string is Even-Odd Palindrome or not
+
+function srtOdd(str){
+let oddStr = str.split('');
+let findOdd = oddStr.filter((item, i) => i % 2 == 0).join('');
+let findEven = oddStr.filter((item, i) => i % 2 !== 0).join(''); 
+
+  if(findOdd == findOdd.split('').reverse().join('') && findEven == findEven.split('').reverse().join('')){
+console.log('YES')
+  }else{
+console.log('NO')
+  }
+}
+srtOdd('abzzab')
