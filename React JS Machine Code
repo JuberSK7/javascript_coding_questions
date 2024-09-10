@@ -1,0 +1,65 @@
+Questions 1 : Create react notification toast pop-up
+
+
+import React, { useState, useEffect } from "react";
+import "./styles.css";
+
+export default function App() {
+  const [toast, setToast] = useState(false);
+
+  const Toast = ({ toatsText, handleClick, handleClose }) => {
+    return (
+      <>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            width: "200px",
+            border: "1px solid black",
+            padding: "8px 8px",
+            backgroundColor: "purple",
+            color: "#fff",
+            position: "absolute",
+            right: "0px",
+            top: "0px",
+          }}
+        >
+          <p>{toatsText}</p>
+          <p onClick={handleClose}>X</p>
+        </div>
+      </>
+    );
+  };
+
+  const handleClick = () => {
+    setToast(true);
+  };
+
+  const handleClose = () => {
+    setToast(false);
+  };
+
+  useEffect(() => {
+    if (toast === true) {
+      setTimeout(() => {
+        setToast(false);
+      }, 5000);
+    }
+  }, [toast]);
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <div>
+        <button onClick={handleClick}>Open Toast</button>
+      </div>
+      {toast && (
+        <Toast
+          toatsText={"This is Toast"}
+          handleClose={handleClose}
+          handleClick={handleClick}
+        />
+      )}
+    </div>
+  );
+}
